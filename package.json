@@ -1,0 +1,26 @@
+{
+  "name": "webcalculator",
+  "version": "1.0.0",
+  "description": "<h1>Web Calculator</h1>",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
+    "serve-static": "^1.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeongHyunHan/WebCalculator.git"
+  },
+  "author": "Seong Hyun Han",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeongHyunHan/WebCalculator/issues"
+  },
+  "homepage": "https://github.com/SeongHyunHan/WebCalculator#readme"
+}
