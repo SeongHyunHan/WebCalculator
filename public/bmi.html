@@ -5,6 +5,23 @@
         <title>BMI Calculator</title>
     </head>
     <body>
-        <h1>This is BMI Calculator Page</h1>
+        <h1>BMI Calculator</h1>
+        <form method="POST" action="/process/bmi">
+            <table>
+                <tr>
+                    <td>Weight(Kg)</td>
+                    <td><input type="number" name="weight" placeholder="Weight(Kg)" step="any" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Height(M)</td>
+                    <td><input type="number"name="height" placeholder="Height(M)" step="any" min="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="" value="BMI Calculate">
+                    </td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>

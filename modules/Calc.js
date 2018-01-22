@@ -36,6 +36,14 @@ Calc.div = (num1, num2) => {
         result = parseFloat(num1)/parseFloat(num2);
         return num1 + " / " + num2 + " = " +  result;
     }
+};
+
+Calc.square = (num) => {
+    return num * num
+};
+
+Calc.bmi = (weight, height) => {
+    return weight / Calc.square(height);
 }
 
 module.exports = Calc;

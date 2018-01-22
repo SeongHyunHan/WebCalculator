@@ -46,9 +46,13 @@ router.route('/process/pageSelect').post((req, res) => {
         case 'Simple Calculator':
             res.redirect('../simple.html');
             break;
+        case 'Currency Converter' :
+            res.redirect('../currency.html');
+            break;
     }
 });
 
+// Router for Simple Calculation
 router.route('/process/simple').post((req, res) => {
     console.log('/process/simple Router Called');
     var num1 = req.body.num1;
@@ -70,6 +74,19 @@ router.route('/process/simple').post((req, res) => {
             break;
     }
     res.send(result);
+});
+
+
+// Router for BMI Calculation
+router.route('/process/bmi').post((req, res) => {
+    console.log('process/bmi Router Called');
+    var weight = req.body.weight;
+    var height = req.body.height;
+
+    var result = Calc.bmi(weight, height);
+    var resultString = `BMI = ${result}`
+
+    res.send(resultString);
 });
 
 router.route('/process/bmi').post((req, res) => {
