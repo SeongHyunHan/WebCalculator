@@ -3,6 +3,7 @@
 <h4>App Info:</h4>
 <ul>
     <li>Language used: JavaScript</li>
+    <li>Library used: Bootstrap4, jQuery </li>
     <li>Framework(Back-End) used: NodeJS, ExpressJS</li>
 </ul>
 
