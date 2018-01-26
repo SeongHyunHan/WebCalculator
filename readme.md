@@ -11,4 +11,6 @@
     <li>Simple Calculator</li>
     <li>BMI Calculator</li>
     <li>Unit Conversion</li>
+    <li>Currency Exchange</li>
+    <li>Tax Calculator<li>
 </ul>
