@@ -1,5 +1,8 @@
 const express = require('express');
 const axios = require('axios');
+const Calc = require('./../modules/Calc');
+const {getExchangeRate} = require('./../modules/exchange');
+
 const router = new express.Router();
 
 // Router parse message and send to page according to value stored in button
@@ -62,5 +65,26 @@ router.route('/process/bmi').post((req, res) => {
 router.route('/process/unit').post((req, res) => {
     console.log('/process/unit Router Called');
 });
+
+
+// Router for Currency Converter
+router.route('/process/convert').post((req, res) => {
+    console.log('/process/convert route called');
+
+    var from = req.body.from;
+    var to = req.body.to;
+    var amount = req.body.amount;
+    if(!from || !to){
+        return res.sendStatus(400);
+    }
+
+    getExchangeRate(from, to).then((rate) => {
+        var exchangedAmount = amount * rate;
+        res.send({exchangedAmount});
+    }).catch((e) => {
+        res.sendStatus(400);  
+    });
+});
+
 
 module.exports= router;
